@@ -1,12 +1,11 @@
-package hexlet.code;
+package hexlet.code.util;
 
 import java.util.Scanner;
 
 public class Cli {
     private static final Scanner SCANNER = new Scanner(System.in);
 
-    public static String askName() {
-        System.out.print("May I have your name? ");
+    public static String inputString() {
         return SCANNER.nextLine();
     }
 }
