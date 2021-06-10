@@ -6,7 +6,7 @@ public class Greet {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String name = Cli.inputString();
-        System.out.printf("Hello, %s!", name);
+        System.out.printf("Hello, %s!\n", name);
 
         return name;
     }

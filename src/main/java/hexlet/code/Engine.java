@@ -3,9 +3,13 @@ package hexlet.code;
 import hexlet.code.util.Cli;
 import hexlet.code.util.Greet;
 
+import java.util.Random;
+
 public abstract class Engine {
 
     private static final int ANSWERS_TO_WIN = 3;
+
+    protected static final Random RANDOM = new Random();
 
     public final void play() {
         int correctAnswers = 0;
