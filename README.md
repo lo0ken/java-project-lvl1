@@ -9,3 +9,8 @@
 [![asciicast](https://asciinema.org/a/K4vatJ6UZ4oDvPXEZZaPCmCAL.svg)](https://asciinema.org/a/K4vatJ6UZ4oDvPXEZZaPCmCAL)
 * Lose case
 [![asciicast](https://asciinema.org/a/WxIXRya4DNRmYY4SlY7XeXR0q.svg)](https://asciinema.org/a/WxIXRya4DNRmYY4SlY7XeXR0q)
+#### Calculator game
+* Win case
+[![asciicast](https://asciinema.org/a/jI5JkfkQFeE9ZY4DmrVD7ukDE.svg)](https://asciinema.org/a/jI5JkfkQFeE9ZY4DmrVD7ukDE)
+* Lose case
+[![asciicast](https://asciinema.org/a/ZOoJi4PbZlkxm1VlWydOHKOvX.svg)](https://asciinema.org/a/ZOoJi4PbZlkxm1VlWydOHKOvX)
