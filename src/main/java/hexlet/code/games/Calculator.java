@@ -7,13 +7,9 @@ import static java.util.Objects.requireNonNull;
 
 public final class Calculator extends Engine {
 
-    private static final int MAX_NUMBER_BOUND = 100;
-
-    private static final String DELIMITER = " ";
-
     @Override
-    protected void printStartMessage() {
-        System.out.println("What is the result of the expression?");
+    protected String getStartMessage() {
+        return "What is the result of the expression?";
     }
 
     @Override

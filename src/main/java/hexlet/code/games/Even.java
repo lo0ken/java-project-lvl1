@@ -8,8 +8,8 @@ public final class Even extends Engine {
     private static final String NO_ANSWER = "no";
 
     @Override
-    protected void printStartMessage() {
-        System.out.println("Answer 'yes' if number even otherwise answer 'no");
+    protected String getStartMessage() {
+        return "Answer 'yes' if number even otherwise answer 'no";
     }
 
     @Override

@@ -9,6 +9,10 @@ public abstract class Engine {
 
     private static final int ANSWERS_TO_WIN = 3;
 
+    protected static final String DELIMITER = " ";
+
+    protected static final int MAX_NUMBER_BOUND = 100;
+
     protected static final Random RANDOM = new Random();
 
     public final void play() {
@@ -16,7 +20,7 @@ public abstract class Engine {
 
         String playerName = Greet.askName();
 
-        printStartMessage();
+        System.out.println(getStartMessage());
 
         while (correctAnswers < ANSWERS_TO_WIN) {
             String question = generateQuestion();
@@ -40,7 +44,7 @@ public abstract class Engine {
         System.out.printf("Congratulations, %s!\n", playerName);
     }
 
-    protected abstract void printStartMessage();
+    protected abstract String getStartMessage();
 
     protected abstract String generateQuestion();
 
