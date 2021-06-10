@@ -18,13 +18,13 @@ public final class Calculator extends Engine {
     }
 
     private int generateNumber() {
-        return RANDOM.nextInt(MAX_NUMBER_BOUND);
+        return generateDefaultNumber();
     }
 
     private String generateOperation() {
-        return Operation.values()[
-                RANDOM.nextInt(Operation.values().length)
-                ].getStringValue();
+        return Operation
+                .values()[generateWithBound(Operation.values().length)]
+                .getStringValue();
     }
 
     @Override

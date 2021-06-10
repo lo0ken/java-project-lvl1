@@ -11,7 +11,7 @@ public final class GCD extends Engine {
 
     @Override
     protected String generateQuestion() {
-        return RANDOM.nextInt(MAX_NUMBER_BOUND) + DELIMITER + RANDOM.nextInt(MAX_NUMBER_BOUND);
+        return generateDefaultNumber() + DELIMITER + generateDefaultNumber();
     }
 
     @Override

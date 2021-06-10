@@ -13,7 +13,7 @@ public abstract class Engine {
 
     protected static final int MAX_NUMBER_BOUND = 100;
 
-    protected static final Random RANDOM = new Random();
+    private static final Random RANDOM = new Random();
 
     public final void play() {
         int correctAnswers = 0;
@@ -42,6 +42,25 @@ public abstract class Engine {
         }
 
         System.out.printf("Congratulations, %s!\n", playerName);
+    }
+
+    /**
+     * Generates a number with bounds [0, {@link #MAX_NUMBER_BOUND}).
+     *
+     * @return generated number
+     */
+    protected int generateDefaultNumber() {
+        return RANDOM.nextInt(MAX_NUMBER_BOUND);
+    }
+
+    /**
+     * Generates a number with bounds [0, {@code bound }).
+     *
+     * @param bound right bound of generated number
+     * @return generated number
+     */
+    protected int generateWithBound(int bound) {
+        return RANDOM.nextInt(bound);
     }
 
     protected abstract String getStartMessage();

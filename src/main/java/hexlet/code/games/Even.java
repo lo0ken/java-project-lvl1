@@ -14,7 +14,7 @@ public final class Even extends Engine {
 
     @Override
     protected String generateQuestion() {
-        return String.valueOf(RANDOM.nextInt());
+        return String.valueOf(generateDefaultNumber());
     }
 
     @Override
