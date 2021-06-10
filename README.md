@@ -1,6 +1,5 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/lo0ken/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/lo0ken/java-project-lvl1/actions)
-
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
 ### Ascinemas
@@ -14,3 +13,8 @@
 [![asciicast](https://asciinema.org/a/jI5JkfkQFeE9ZY4DmrVD7ukDE.svg)](https://asciinema.org/a/jI5JkfkQFeE9ZY4DmrVD7ukDE)
 * Lose case
 [![asciicast](https://asciinema.org/a/ZOoJi4PbZlkxm1VlWydOHKOvX.svg)](https://asciinema.org/a/ZOoJi4PbZlkxm1VlWydOHKOvX)
+#### GCD game
+* Win case
+[![asciicast](https://asciinema.org/a/hQUfgRcEyqQogskxahcUqHhnm.svg)](https://asciinema.org/a/hQUfgRcEyqQogskxahcUqHhnm)
+* Lose case
+[![asciicast](https://asciinema.org/a/04snsEBnkHqvhaIcgGP3eCa7D.svg)](https://asciinema.org/a/04snsEBnkHqvhaIcgGP3eCa7D)
