@@ -1,7 +1,6 @@
 package hexlet.code;
 
 import hexlet.code.games.Even;
-import hexlet.code.games.Game;
 import hexlet.code.util.Greet;
 import hexlet.code.util.Cli;
 
@@ -9,10 +8,9 @@ import java.util.Map;
 
 public class App {
 
-    private static Map<Integer, Game> gameList = Map.of(
+    private static final Map<Integer, Engine> GAME_LIST = Map.of(
       2, new Even()
     );
-
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
@@ -30,7 +28,7 @@ public class App {
                 Greet.askName();
                 break;
             default:
-                gameList.get(choice).play();
+                GAME_LIST.get(choice).play();
         }
     }
 }
