@@ -7,20 +7,11 @@ public enum Operation {
 
     private final String stringValue;
 
-    Operation(String stringValue) {
-        this.stringValue = stringValue;
+    Operation(String value) {
+        this.stringValue = value;
     }
 
     public String getStringValue() {
         return stringValue;
-    }
-
-    public static Operation fromString(String c) {
-        for (Operation operation : Operation.values()) {
-            if (operation.getStringValue().equals(c)) {
-                return operation;
-            }
-        }
-        return null;
     }
 }

@@ -20,14 +20,14 @@ public final class Calculator extends Engine {
         Operation operation = generateOperation();
 
         return new Pair(
-              firstNumber + DELIMITER + operation + DELIMITER + secondNumber,
+              firstNumber + DELIMITER + operation.getStringValue() + DELIMITER + secondNumber,
                 String.valueOf(calculate(firstNumber, secondNumber, operation))
         );
     }
 
     private Operation generateOperation() {
         return Operation
-                .values()[generateWithMaxBound(Operation.values().length)];
+                .values()[generateWithMaxBound(Operation.values().length - 1)];
     }
 
     private int calculate(int firstNumber, int secondNumber, Operation operation) {
