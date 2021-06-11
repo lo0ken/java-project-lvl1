@@ -27,7 +27,7 @@ public final class Calculator extends Engine {
 
     private Operation generateOperation() {
         return Operation
-                .values()[generateWithBound(Operation.values().length)];
+                .values()[generateWithMaxBound(Operation.values().length)];
     }
 
     private int calculate(int firstNumber, int secondNumber, Operation operation) {

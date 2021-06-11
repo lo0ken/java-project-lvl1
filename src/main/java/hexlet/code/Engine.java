@@ -11,7 +11,8 @@ public abstract class Engine {
 
     protected static final String DELIMITER = " ";
 
-    protected static final int MAX_NUMBER_BOUND = 100;
+    protected static final int DEFAULT_MAX_NUMBER = 100;
+    protected static final int DEFAULT_MIN_NUMBER = 0;
 
     private static final Random RANDOM = new Random();
 
@@ -45,22 +46,33 @@ public abstract class Engine {
     }
 
     /**
-     * Generates a number with bounds [0, {@link #MAX_NUMBER_BOUND}).
+     * Generates a number with bounds [{@link #DEFAULT_MIN_NUMBER}, {@link #DEFAULT_MAX_NUMBER}].
      *
      * @return generated number
      */
     protected int generateDefaultNumber() {
-        return RANDOM.nextInt(MAX_NUMBER_BOUND);
+        return generateWithBounds(DEFAULT_MIN_NUMBER, DEFAULT_MAX_NUMBER);
     }
 
     /**
-     * Generates a number with bounds [0, {@code bound }).
+     * Generates a number with bounds [0, {@code bound}].
      *
-     * @param bound right bound of generated number
+     * @param bound max value of number to generate
      * @return generated number
      */
-    protected int generateWithBound(int bound) {
-        return RANDOM.nextInt(bound);
+    protected int generateWithMaxBound(int bound) {
+        return generateWithBounds(DEFAULT_MIN_NUMBER, bound);
+    }
+
+    /**
+     * Generates a number with bounds [{@code min}, {@code max}].
+     *
+     * @param min min value of number to generate
+     * @param max max value of number to generate
+     * @return generated number with specified bounds
+     */
+    protected int generateWithBounds(int min, int max) {
+        return RANDOM.nextInt(max - min + 1) + min;
     }
 
     protected abstract String getStartMessage();
