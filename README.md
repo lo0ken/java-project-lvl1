@@ -18,3 +18,13 @@
 [![asciicast](https://asciinema.org/a/hQUfgRcEyqQogskxahcUqHhnm.svg)](https://asciinema.org/a/hQUfgRcEyqQogskxahcUqHhnm)
 * Lose case
 [![asciicast](https://asciinema.org/a/04snsEBnkHqvhaIcgGP3eCa7D.svg)](https://asciinema.org/a/04snsEBnkHqvhaIcgGP3eCa7D)
+#### Progression game
+* Win case
+[![asciicast](https://asciinema.org/a/xrqpQCLr9jDmWIE4a9ssSue5b.svg)](https://asciinema.org/a/xrqpQCLr9jDmWIE4a9ssSue5b)
+* Lose case
+[![asciicast](https://asciinema.org/a/Eky1pu2bXPLVW5cCzTSPAx9El.svg)](https://asciinema.org/a/Eky1pu2bXPLVW5cCzTSPAx9El)
+#### Prime game
+* Win case
+[![asciicast](https://asciinema.org/a/HaUfGdo3cgJkMsKpYfyDYEjPr.svg)](https://asciinema.org/a/HaUfGdo3cgJkMsKpYfyDYEjPr)
+* Lose case
+[![asciicast](https://asciinema.org/a/yAwDeY3lrkdo3ytOVE90kWVhT.svg)](https://asciinema.org/a/yAwDeY3lrkdo3ytOVE90kWVhT)
