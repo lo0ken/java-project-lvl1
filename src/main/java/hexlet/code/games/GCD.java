@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Pair;
 
 public final class GCD extends Engine {
 
@@ -10,18 +11,14 @@ public final class GCD extends Engine {
     }
 
     @Override
-    protected String generateQuestion() {
-        return generateDefaultNumber() + DELIMITER + generateDefaultNumber();
-    }
+    protected Pair generatePair() {
+        int firstNumber = generateDefaultNumber();
+        int secondNumber = generateDefaultNumber();
 
-    @Override
-    protected String getCorrectAnswer(String question) {
-        String[] questionParts = question.split(DELIMITER);
-
-        int firstNumber = Integer.parseInt(questionParts[0]);
-        int secondNumber = Integer.parseInt(questionParts[1]);
-
-        return String.valueOf(gcd(firstNumber, secondNumber));
+        return new Pair(
+            firstNumber + DELIMITER + secondNumber,
+                String.valueOf(gcd(firstNumber, secondNumber))
+        );
     }
 
     private int gcd(int a, int b) {

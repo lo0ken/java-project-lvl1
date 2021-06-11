@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Pair;
 
 public final class Even extends Engine {
 
@@ -13,12 +14,16 @@ public final class Even extends Engine {
     }
 
     @Override
-    protected String generateQuestion() {
-        return String.valueOf(generateDefaultNumber());
+    protected Pair generatePair() {
+        int questionNumber = generateDefaultNumber();
+
+        return new Pair(
+                String.valueOf(questionNumber),
+                isEven(questionNumber)
+        );
     }
 
-    @Override
-    protected String getCorrectAnswer(String question) {
-        return Integer.parseInt(question) % 2 == 0 ? YES_ANSWER : NO_ANSWER;
+    private String isEven(int number) {
+        return number % 2 == 0 ? YES_ANSWER : NO_ANSWER;
     }
 }

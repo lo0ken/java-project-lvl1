@@ -23,13 +23,13 @@ public abstract class Engine {
         System.out.println(getStartMessage());
 
         while (correctAnswers < ANSWERS_TO_WIN) {
-            String question = generateQuestion();
-            System.out.println("Question: " + question);
+            Pair pair = generatePair();
+            System.out.println("Question: " + pair.getQuestion());
             System.out.print("Your answer: ");
 
             String answer = Cli.inputString();
 
-            String correctAnswer = getCorrectAnswer(question);
+            String correctAnswer = pair.getAnswer();
             if (!answer.equals(correctAnswer)) {
                 System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n",
                         answer, correctAnswer);
@@ -65,7 +65,5 @@ public abstract class Engine {
 
     protected abstract String getStartMessage();
 
-    protected abstract String generateQuestion();
-
-    protected abstract String getCorrectAnswer(String question);
+    protected abstract Pair generatePair();
 }
