@@ -8,9 +8,15 @@ import hexlet.code.games.Progression;
 import hexlet.code.util.Greet;
 import hexlet.code.util.Cli;
 
-import java.util.Map;
-
 public class App {
+
+    /* Для избежания checkstyle-ошибки  '3' is a magic number. [MagicNumber] */
+    private static final int GREET_ANSWER = 1;
+    private static final int EVEN_ANSWER = 2;
+    private static final int CALCULATOR_ANSWER = 3;
+    private static final int GCD_ANSWER = 4;
+    private static final int PROGRESSION_ANSWER = 5;
+    private static final int PRIME_ANSWER = 6;
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
@@ -28,22 +34,22 @@ public class App {
         switch (choice) {
             case 0:
                 break;
-            case 1:
+            case GREET_ANSWER:
                 Greet.greet();
                 break;
-            case 2:
+            case EVEN_ANSWER:
                 Even.run();
                 break;
-            case 3:
+            case CALCULATOR_ANSWER:
                 Calculator.run();
                 break;
-            case 4:
+            case GCD_ANSWER:
                 GCD.run();
                 break;
-            case 5:
+            case PROGRESSION_ANSWER:
                 Progression.run();
                 break;
-            case 6:
+            case PRIME_ANSWER:
                 Prime.run();
                 break;
             default:
