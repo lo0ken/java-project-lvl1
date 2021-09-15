@@ -1,42 +1,49 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Pair;
-import hexlet.code.enums.Operation;
 
-import static java.util.Objects.requireNonNull;
+import static hexlet.code.Engine.DELIMITER;
+import static hexlet.code.util.NumberGenerator.generateDefaultNumber;
+import static hexlet.code.util.NumberGenerator.generateWithMaxBound;
 
-public final class Calculator extends Engine {
+public final class Calculator {
 
-    @Override
-    protected String getStartMessage() {
-        return "What is the result of the expression?";
+    private static final String START_MESSAGE = "What is the result of the expression?";
+
+    private static final char[] OPERATIONS = new char[]{'+', '-', '*'};
+
+    private static char generateOperation() {
+        return OPERATIONS[generateWithMaxBound(OPERATIONS.length - 1)];
     }
 
-    @Override
-    protected Pair generatePair() {
-        int firstNumber = generateDefaultNumber();
-        int secondNumber = generateDefaultNumber();
-        Operation operation = generateOperation();
+    private static String[][] generateData() {
+        String[][] data = new String[Engine.ANSWERS_TO_WIN][2];
 
-        return new Pair(
-              firstNumber + DELIMITER + operation.getStringValue() + DELIMITER + secondNumber,
-                String.valueOf(calculate(firstNumber, secondNumber, operation))
-        );
+        for (int i = 0; i < Engine.ANSWERS_TO_WIN; i++) {
+            int firstNumber = generateDefaultNumber();
+            int secondNumber = generateDefaultNumber();
+            char operation = generateOperation();
+
+            String question = firstNumber + DELIMITER + operation + DELIMITER + secondNumber;
+            String answer = String.valueOf(calculate(firstNumber, secondNumber, operation));
+
+            data[i] = new String[] {question, answer};
+        }
+
+        return data;
     }
 
-    private Operation generateOperation() {
-        return Operation
-                .values()[generateWithMaxBound(Operation.values().length - 1)];
+    public static void run() {
+        Engine.play(START_MESSAGE, generateData());
     }
 
-    private int calculate(int firstNumber, int secondNumber, Operation operation) {
-        switch (requireNonNull(operation)) {
-            case PLUS:
+    private static int calculate(int firstNumber, int secondNumber, char operation) {
+        switch (operation) {
+            case '+':
                 return firstNumber + secondNumber;
-            case MINUS:
+            case '-':
                 return firstNumber - secondNumber;
-            case MULTIPLY:
+            case '*':
                 return firstNumber * secondNumber;
             default:
                 throw new RuntimeException("Should not have gotten here");

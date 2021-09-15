@@ -12,14 +12,6 @@ import java.util.Map;
 
 public class App {
 
-    private static final Map<Integer, Engine> GAME_LIST = Map.of(
-            2, new Even(),
-            3, new Calculator(),
-            4, new GCD(),
-            5, new Progression(),
-            6, new Prime()
-    );
-
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -37,10 +29,25 @@ public class App {
             case 0:
                 break;
             case 1:
-                Greet.askName();
+                Greet.greet();
+                break;
+            case 2:
+                Even.run();
+                break;
+            case 3:
+                Calculator.run();
+                break;
+            case 4:
+                GCD.run();
+                break;
+            case 5:
+                Progression.run();
+                break;
+            case 6:
+                Prime.run();
                 break;
             default:
-                GAME_LIST.get(choice).play();
+                System.out.println("Wrong input! Try again");
         }
     }
 }
