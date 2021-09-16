@@ -21,14 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up openJDK
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '15'
       - name: Hexlet project check
         uses: hexlet/project-action@release
         with:
           hexlet-id: ${{ secrets.HEXLET_ID }}
-      - name: Build with Gradle
-        run: make build
